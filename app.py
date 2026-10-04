@@ -190,7 +190,7 @@ st.markdown(
 | Annahme | Was passiert, wenn sie verletzt ist | Wer setzt an |
 |---|---|---|
 | **Zwischenankünfte und Dauern sind unabhängig und unkorreliert** | Kingman kennt nur die Varianz; Wellen, Fähren-Pulks und Serien langer Abfertigungen (Autokorrelation) machen die Wartezeit länger, als die Formel sagt. | **[Zeitvariable Ankünfte](https://sebastianhanisch-time-varying-arrivals-demo.streamlit.app/)** |
-| **Alle Lkw gleich wichtig** | Eilige Lkw überholen: Für sie wird die Wartezeit kürzer, für die anderen länger; die Mittelwerte hier gelten für alle zusammen. | **Prioritätsklassen** (Folgestück) |
+| **Alle Lkw gleich wichtig** | Eilige Lkw überholen: Für sie wird die Wartezeit kürzer, für die anderen länger; die Mittelwerte hier gelten für alle zusammen. | **[Prioritätsklassen](https://sebastianhanisch-priority-queue-demo.streamlit.app/)** |
 | **Ein Gate** | In Netzen verändert jede Station die Streuung des Stroms (Ausgangsstrom ist nicht Poisson); Kingman gilt je Station nur mit angepasstem ca². | **Jackson-Netze** (Folgestück) |
 | **Geduldige Lkw, unbegrenzter Warteraum** | Mit Abwanderung oder begrenztem Aufstellplatz ändert sich die Kennzahl: Verlust statt Warten. | **[Erlang A](https://sebastianhanisch-erlang-a-demo.streamlit.app/)** und **[Erlang B](https://sebastianhanisch-erlang-b-demo.streamlit.app/)** |
 | **Mehrere Spuren: Allen-Cunneen** | Bei geringer Last ist die Näherung relativ ungenau (der absolute Fehler bleibt winzig); ihr Vorteil liegt bei hoher Last. | kein Folgestück |
@@ -198,7 +198,7 @@ st.markdown(
 """
 )
 st.caption(
-    "Verwandt im Portfolio: [mm1-queue-demo](https://sebastianhanisch-mm1-queue-demo.streamlit.app/) (Stück 1: eine Spur, feste Dauer halbiert die Wartezeit), "
+    "Verwandt im Portfolio: [markov-queue-demo](https://sebastianhanisch-markov-queue-demo.streamlit.app/) (Zusatzstück: Phasen-Ketten für Erlang-Dauern ergeben genau die Pollaczek-Khinchine-Wartezeit), [mm1-queue-demo](https://sebastianhanisch-mm1-queue-demo.streamlit.app/) (Stück 1: eine Spur, feste Dauer halbiert die Wartezeit), "
     "[mmc-queue-demo](https://sebastianhanisch-mmc-queue-demo.streamlit.app/) (Stück 3: mehrere Spuren, Erlang C als Basis der Näherung), "
     "[erlang-b-demo](https://sebastianhanisch-erlang-b-demo.streamlit.app/) (Stück 8: der Verlust ist unempfindlich gegen die Streuung, das Warten nicht), "
     "[output-analysis-demo](https://sebastianhanisch-output-analysis-demo.streamlit.app/) (Stück 2: Konfidenzintervalle und Aufwand) und die Hafen-Demo "

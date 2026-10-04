@@ -70,6 +70,7 @@ Alle Zahlen stehen in `tests/test_claims.py`. Wartezeiten in Abfertigungsdauern,
 
 ## Verwandte Demos im Portfolio
 
+- [`markov-queue-demo`](https://github.com/sebastian-hanisch/markov-queue-demo) (Zusatzstück: Phasen-Ketten für Erlang-Dauern ergeben genau die Pollaczek-Khinchine-Wartezeit).
 - [`mm1-queue-demo`](https://github.com/sebastian-hanisch/mm1-queue-demo) (Stück 1): eine Spur, feste Dauer halbiert die Wartezeit.
 - [`mmc-queue-demo`](https://github.com/sebastian-hanisch/mmc-queue-demo) (Stück 3): mehrere Spuren, Erlang C als Basis der Näherung.
 - [`erlang-b-demo`](https://github.com/sebastian-hanisch/erlang-b-demo) (Stück 8): der Verlust ist unempfindlich gegen die Streuung, das Warten nicht.
@@ -83,7 +84,7 @@ Jede dieser Annahmen hebt ein Folgestück der Linie auf:
 | Annahme | Folgestück |
 |---|---|
 | Zwischenankünfte und Dauern unkorreliert | [Zeitvariable Ankünfte](https://github.com/sebastian-hanisch/time-varying-arrivals-demo) |
-| Alle Lkw gleich wichtig | Prioritätsklassen |
+| Alle Lkw gleich wichtig | [Prioritätsklassen](https://github.com/sebastian-hanisch/priority-queue-demo) |
 | Ein Gate | Jackson-Netze |
 | Geduldige Lkw, unbegrenzter Warteraum | [Erlang A](https://github.com/sebastian-hanisch/erlang-a-demo), [Erlang B](https://github.com/sebastian-hanisch/erlang-b-demo) |
 
