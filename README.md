@@ -85,7 +85,7 @@ Jede dieser Annahmen hebt ein Folgestück der Linie auf:
 |---|---|
 | Zwischenankünfte und Dauern unkorreliert | [Zeitvariable Ankünfte](https://github.com/sebastian-hanisch/time-varying-arrivals-demo) |
 | Alle Lkw gleich wichtig | [Prioritätsklassen](https://github.com/sebastian-hanisch/priority-queue-demo) |
-| Ein Gate | Jackson-Netze |
+| Ein Gate | [Jackson-Netze](https://github.com/sebastian-hanisch/jackson-network-demo) |
 | Geduldige Lkw, unbegrenzter Warteraum | [Erlang A](https://github.com/sebastian-hanisch/erlang-a-demo), [Erlang B](https://github.com/sebastian-hanisch/erlang-b-demo) |
 
 Kein Folgestück: Verteilung der Wartezeit (Quantile), bessere Näherungen für mehrere Spuren.

@@ -191,7 +191,7 @@ st.markdown(
 |---|---|---|
 | **Zwischenankünfte und Dauern sind unabhängig und unkorreliert** | Kingman kennt nur die Varianz; Wellen, Fähren-Pulks und Serien langer Abfertigungen (Autokorrelation) machen die Wartezeit länger, als die Formel sagt. | **[Zeitvariable Ankünfte](https://sebastianhanisch-time-varying-arrivals-demo.streamlit.app/)** |
 | **Alle Lkw gleich wichtig** | Eilige Lkw überholen: Für sie wird die Wartezeit kürzer, für die anderen länger; die Mittelwerte hier gelten für alle zusammen. | **[Prioritätsklassen](https://sebastianhanisch-priority-queue-demo.streamlit.app/)** |
-| **Ein Gate** | In Netzen verändert jede Station die Streuung des Stroms (Ausgangsstrom ist nicht Poisson); Kingman gilt je Station nur mit angepasstem ca². | **Jackson-Netze** (Folgestück) |
+| **Ein Gate** | In Netzen verändert jede Station die Streuung des Stroms (Ausgangsstrom ist nicht Poisson); Kingman gilt je Station nur mit angepasstem ca². | **[Jackson-Netze](https://sebastianhanisch-jackson-network-demo.streamlit.app/)** |
 | **Geduldige Lkw, unbegrenzter Warteraum** | Mit Abwanderung oder begrenztem Aufstellplatz ändert sich die Kennzahl: Verlust statt Warten. | **[Erlang A](https://sebastianhanisch-erlang-a-demo.streamlit.app/)** und **[Erlang B](https://sebastianhanisch-erlang-b-demo.streamlit.app/)** |
 | **Mehrere Spuren: Allen-Cunneen** | Bei geringer Last ist die Näherung relativ ungenau (der absolute Fehler bleibt winzig); ihr Vorteil liegt bei hoher Last. | kein Folgestück |
 | **Nur die mittlere Wartezeit** | Quantile (90 % der Lkw warten höchstens …) brauchen die ganze Verteilung; hier nicht abgebildet. | kein Folgestück |
