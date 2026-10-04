@@ -233,5 +233,6 @@ Implementiert in `mg1_formulas.py` (Formeln, G/M/1), `mg1_simulation.py` (Sample
 st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html))."
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Warteschlangentheorie: M/M/1 bis Surrogat](https://sebastianhanisch.net/konzepte-warteschlangentheorie.html)."
 )
