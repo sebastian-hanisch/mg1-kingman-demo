@@ -1,5 +1,7 @@
 # M/G/1 und Kingman – Streuung kostet Wartezeit (Streamlit-Demo)
 
+**[→ Demo live ausprobieren](https://sebastianhanisch-mg1-kingman-demo.streamlit.app/)**
+
 Interaktive Demo zur **Wartezeit bei beliebiger Streuung** von Ankünften und Abfertigung am Terminal-Gate. **Zehntes Stück der Konzepte-Linie „Warteschlangentheorie und
 Simulation“** im Portfolio von [Sebastian Hanisch](https://sebastianhanisch.net) (Operations Research und Machine Learning): ein Verfahren, ein wachsendes Beispiel, jedes
 Folgestück hebt genau eine Annahme auf.
