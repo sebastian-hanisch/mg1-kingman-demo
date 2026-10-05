@@ -92,7 +92,7 @@ Kein Folgestück: Verteilung der Wartezeit (Quantile), bessere Näherungen für 
 
 ## Tests
 
-120 Tests, rund 40 Sekunden: Pollaczek-Khinchine von Hand, Kingman (symmetrisch, gleich Pollaczek-Khinchine bei ca² = 1), Allen-Cunneen (gleich Kingman für eine Spur, gleich Erlang C bei Poisson/exponentiell),
+144 Tests: Orakel-Tests (`tests/test_oracle_mg1.py`: Pollaczek-Khinchine und G/M/1 gegen abgeschnittene Markov-Ketten mit Phasentyp-Verteilungen, D/M/1 gegen die eingebettete Kette, Erlang C gegen Geburts-Todes-Gleichungen, die Kiefer-Wolfowitz-Schleife gegen eine Brute-Force-FIFO-Rechnung), Pollaczek-Khinchine von Hand, Kingman (symmetrisch, gleich Pollaczek-Khinchine bei ca² = 1), Allen-Cunneen (gleich Kingman für eine Spur, gleich Erlang C bei Poisson/exponentiell),
 die Laplace-Transformierten (Mittel und Streuung), G/M/1 (gleich M/M/1 bei Poisson, Fixpunkt, D/M/1 von Hand, Monotonie in ca², Kingman-Fehler sinkt mit der Last), die Sampler, Mini-Instanzen von Hand, die
 Lindley-Rekursion als exakte Gegenprobe, Simulation gegen alle exakten Formeln, Vollständigkeit der vorgerechneten Datei, Presets und Permalink, Diagramme (gesperrte Achsen), AppTest-Rauchtests mit festem Würfel-Seed,
 der Smoke-Test der Portfolio-Vorlage, ein Quelltext-Test gegen Satz-Komma-Fehler und `test_claims.py` für jede Zahl dieser README.
