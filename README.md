@@ -53,7 +53,7 @@ Alle Zahlen stehen in `tests/test_claims.py`. Wartezeiten in Abfertigungsdauern,
   nur 1.5·10⁴ Kunden: das ist unplausibel (Erlang-4 streut mehr als feste Dauer und brauchte trotzdem weniger Kunden). Die Streuung eines Laufs braucht viele Wiederholungen; die Aufwandsmessung
   mit 48 Läufen liefert die monotone Reihe 18 / 30 / 41 / 145 (Tausend).
 - **Die Vorab-Messreihe nannte „+95 %“ für D/M/1 bei Auslastung 50 %** (aus einer Simulation); der exakte G/M/1-Wert ergibt +96 % (0.500 gegen 0.255).
-- **Bei Auslastung 95 % und cs² = 4 lag die Simulation der Vorab-Messreihe 5 % unter der Formel**, trotz kleinem Standardfehler (schwerer Schwanz). In der Studie sind es −3.7 % (stark streuende Dauer, Poisson-Ankünfte, eine Spur,
+- **Bei Auslastung 95 % und cs² = 4 lag die Simulation der Vorab-Messreihe 5 % unter der Formel**, trotz kleinem Standardfehler (schwerer Tail). In der Studie sind es −3.7 % (stark streuende Dauer, Poisson-Ankünfte, eine Spur,
   Auslastung 95 %): auch dort die Simulation unter dem exakten Wert, mit deutlicher Streuung eines Laufs.
 - **Der Standardlauf liegt 6.7 % über dem exakten Wert**: ein Lauf mit 150 000 Kunden und stark streuender Dauer streut um Zehntel; die Studie mittelt sechs lange Läufe.
 
