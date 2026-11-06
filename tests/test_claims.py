@@ -63,7 +63,7 @@ def test_dm1_simulation_against_the_exact_gim1_wait():
 
 
 def test_allen_cunneen_for_four_lanes_is_good_at_high_load_and_poor_at_low_load():
-    """README (vier Spuren): relativ bis +2552 % bei Auslastung 50 % (D/M/4: 0.043 gegen 0.010), aber absolut höchstens 0.3 min; bei 80 % bis 77 %, absolut 0.9 min; bei 95 % alle
+    """README (vier Spuren): relativ bis +2552 % bei Auslastung 50 % (feste Ankunft, Erlang-4-Dauer cs² = 0.25: 0.0109 gegen 0.0004; D/M/4 mit cs² = 1: +323 %, 0.043 gegen 0.010), aber absolut höchstens 0.3 min; bei 80 % bis 77 %, absolut 0.9 min; bei 95 % alle
     Zellen mit Wartezeit innerhalb von ±11.1 % (absolut bis 2.1 min). M/M/4 (Erlang C) stimmt auf −0.1 / +0.3 / −1.7 %."""
     for r, rel, absolute in ((50, 2551.7, 0.3), (80, 77.0, 0.9), (95, 11.1, 2.1)):
         cells = [cell(4, r, a, s) for a in C.STUDY_CA2 for s in C.STUDY_CS2]
@@ -72,6 +72,8 @@ def test_allen_cunneen_for_four_lanes_is_good_at_high_load_and_poor_at_low_load(
         assert round(F.to_minutes(max(abs(x["approx"] - E.cell_mean(x)) for x in cells)), 1) == absolute
     assert [pct(E.approx_error(cell(4, r, 1.0, 1.0)), 1) for r in C.STUDY_RHO_PCT] == pytest.approx([-0.1, 0.3, -1.7], abs=0.051)
     assert round(cell(4, 50, 0.0, 1.0)["approx"], 3) == 0.043 and round(E.cell_mean(cell(4, 50, 0.0, 1.0)), 3) == 0.010
+    peak = cell(4, 50, 0.0, 0.25)                                    # die Zelle mit dem Höchstwert +2552 % (sehr rauschempfindlich: Simulationsmittel nur 0.0004)
+    assert pct(E.approx_error(peak), 1) == pytest.approx(2551.7, abs=0.06 * 25.5) and round(peak["approx"], 4) == 0.0109 and round(E.cell_mean(peak), 4) == 0.0004
 
 
 def test_the_smoothing_arrivals_are_overestimated_and_bursty_arrivals_underestimated_for_several_lanes():

@@ -42,10 +42,20 @@ st.markdown(
     """
 Bisher war die Abfertigung **exponentiell** und die Ankunft **Poisson**. Echte Gates sind regelmäßiger (feste Abfertigung, Termine) oder unregelmäßiger (lange
 Ausreißer, Pulks). In Stück 8 hing der **Verlust** nicht von der Streuung ab; das **Warten** tut es, und zwar **linear**: Die Formel von **Pollaczek und Khinchine** sagt für
-eine Spur mit Poisson-Ankünften Wq = ρ/(1 − ρ) · **(1 + cs²)/2** · mittlere Dauer. Feste Dauer halbiert die Wartezeit gegenüber exponentieller, eine Dauer mit cs² = 4 verfünffacht
-sie. **Kingman** ergänzt die Streuung der Ankünfte: (ca² + cs²)/2, symmetrisch, als Näherung für starke Auslastung.
+eine Spur mit Poisson-Ankünften Wq = ρ/(1 − ρ) · **(1 + cs²)/2** · mittlere Dauer. Feste Dauer halbiert die Wartezeit gegenüber exponentieller, eine Dauer mit cs² = 4 macht sie 2,5-mal so lang wie bei exponentieller (5-mal so lang wie bei fester) Dauer. **Kingman** ergänzt die Streuung der Ankünfte: (ca² + cs²)/2, symmetrisch, als Näherung für starke Auslastung.
 """
 )
+
+# erklaerseite:einfach:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/mg1-kingman-erklaert.json, nicht von Hand ändern)
+with st.expander("💬 In einfachen Worten"):
+    st.markdown(
+        """
+Ein Gate mit einer oder vier Spuren, an dem Lkw nacheinander abgefertigt werden. Die Demo zeigt, dass die Wartezeit nicht nur vom Durchschnitt abhängt, sondern auch davon, wie unregelmäßig die Lkw eintreffen und wie unterschiedlich lange die Abfertigung dauert. Bei gleicher Auslastung wartet man bei gleichmäßiger Abfertigung kürzer als bei zufälliger und bei sehr unterschiedlicher Dauer länger. Zwei bekannte Formeln, nach Pollaczek und Khinchine und nach Kingman, rechnen das aus. Die Demo stellt sie einer Simulation gegenüber und zeigt, wo sie genau sind und wo nicht. Außerdem sieht man, wie viele Kunden eine Simulation braucht, damit ihr Ergebnis verlässlich wird.
+
+[Ausführlich und verständlich erklärt, mit Fachteil](https://sebastianhanisch.net/mg1-kingman-erklaert.html)
+        """
+    )
+# erklaerseite:einfach:end
 st.caption(
     "Zehntes Stück der Linie „Warteschlangentheorie und Simulation“, aufbauend auf "
     "[mm1-queue-demo](https://sebastianhanisch-mm1-queue-demo.streamlit.app/) (dort schon: feste Dauer halbiert die Wartezeit) und "
@@ -208,6 +218,24 @@ st.caption(
 st.markdown("---")
 
 with st.expander("📐 Mathematische Formulierung"):
+    # erklaerseite:lesehilfe:start (erzeugt von tools/set_demo_explainer.py (Website-Repo) aus tools/content/explainers/mg1-kingman-erklaert.json, nicht von Hand ändern)
+    st.markdown(
+        r"""
+**Lesehilfe.** Gegeben sind die Auslastung $\rho$ je Spur, die Spurzahl $c$ und die Streuung von Zwischenankunftszeit und Abfertigungsdauer. Gesucht ist die mittlere Wartezeit in der Schlange, exakt oder als Näherung, und der Vergleich mit einer Simulation.
+
+| Symbol | Bedeutung |
+|---|---|
+| $\rho$ | Auslastung je Spur (Gleichgewicht nur für $\rho < 1$) |
+| $c$ | Zahl der Spuren |
+| $c_a^2$ | quadrierter Variationskoeffizient der Zwischenankunftszeit (0 fest, 1 Poisson, 4 stoßweise) |
+| $c_s^2$ | quadrierter Variationskoeffizient der Abfertigungsdauer (0 fest, 1 exponentiell, 4 stark streuend) |
+| $W_q$ | mittlere Wartezeit in der Schlange, in mittleren Abfertigungsdauern |
+| $\sigma$, $A^*$ | Hilfsgröße von G/M/1 und Laplace-Transformierte der Zwischenankunftszeit |
+
+[Schritt für Schritt erklärt, mit Herleitung und Literatur](https://sebastianhanisch.net/mg1-kingman-erklaert.html#fachleute)
+        """
+    )
+    # erklaerseite:lesehilfe:end
     st.markdown(
         r"""
 **Modell.** $G/G/c$: Zwischenankunftszeiten mit Mittel $1/(c\rho)$ und Variationskoeffizient² $c_a^2$, Abfertigungsdauern mit Mittel 1 und $c_s^2$, $c$ Spuren, FIFO, unendlicher Warteraum,
