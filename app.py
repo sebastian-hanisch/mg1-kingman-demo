@@ -246,7 +246,7 @@ Auslastung $\rho < 1$ je Spur. Wartezeiten in Abfertigungsdauern.
 **G/M/1 (exakt).** $W_q = \dfrac{\sigma}{1 - \sigma}$ mit $\sigma = A^*(1 - \sigma)$, $A^*(s) = E[e^{-sT}]$ die Laplace-Transformierte der Zwischenankunftszeit $T$; bei Poisson-Ankünften
 $\sigma = \rho$ (M/M/1).
 
-**Kingman (Näherung, $c = 1$).** $W_q \approx \dfrac{\rho}{1 - \rho}\cdot\dfrac{c_a^2 + c_s^2}{2}$, asymptotisch exakt für $\rho \to 1$ (Schwerverkehr); für $c_a^2 = 1$ gleich Pollaczek-Khinchine.
+**Kingman (Näherung, $c = 1$).** $W_q \approx \dfrac{\rho}{1 - \rho}\cdot\dfrac{c_a^2 + c_s^2}{2}$, asymptotisch exakt für $\rho \to 1$ (Heavy-Traffic-Grenzwert); für $c_a^2 = 1$ gleich Pollaczek-Khinchine.
 
 **Allen-Cunneen (Näherung, $c \ge 1$).** $W_q \approx W_q^{M/M/c}\cdot\dfrac{c_a^2 + c_s^2}{2}$ mit $W_q^{M/M/c} = \dfrac{C(c, c\rho)}{c(1-\rho)}$ (Erlang C).
 
